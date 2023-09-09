@@ -5,11 +5,13 @@ import navBar from '../components/shared/navBar';
 import formEvents from '../events/formEvents';
 import domEvents from '../events/domEvents';
 import navigationEvents from '../events/navigatoinEvents';
+import { emptyVocab, showVocab } from '../pages/vocab';
 
 const startApp = (user) => {
   domBuilder();
   navBar();
   domEvents(user);
+  formEvents(user);
   navigationEvents(user);
   logoutButton();
 
