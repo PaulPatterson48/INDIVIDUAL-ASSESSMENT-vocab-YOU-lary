@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import {
   deleteVocab, getVocab, getSingleVocab, getVocabDetails
 } from '../api/languageData';

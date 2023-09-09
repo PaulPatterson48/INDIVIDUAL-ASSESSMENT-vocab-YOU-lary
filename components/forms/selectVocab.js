@@ -1,4 +1,4 @@
-import getVocab from '../../api/languageData';
+import { getVocab } from '../../api/languageData';
 import renderToDom from '../../utils/renderToDom';
 
 const selectVocab = (title) => {

@@ -83,5 +83,11 @@ const searchVocab = (searchValue, uid) => new Promise((resolve, reject) => {
 });
 
 export {
-  getVocab, deleteVocab, getSingleVocab, createVocab, updateVocab, searchVocab, getVocabDetails
+  getVocab,
+  deleteVocab,
+  getSingleVocab,
+  createVocab,
+  updateVocab,
+  searchVocab,
+  getVocabDetails
 };
