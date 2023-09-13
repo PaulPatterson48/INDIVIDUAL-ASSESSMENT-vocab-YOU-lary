@@ -25,7 +25,7 @@ const domEvents = (user) => {
       getVocab(user.user_id).then((vocab) => {
         const javascript = [];
         vocab.forEach((word) => {
-          if (word.langTech === 'C#') {
+          if (word.langTech === 'javascript') {
             javascript.push(word);
           }
         });
