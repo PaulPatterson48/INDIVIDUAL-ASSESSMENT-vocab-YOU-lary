@@ -1,6 +1,6 @@
 /* eslint-disable no-alert */
 import {
-  deleteVocab, getVocab, getSingleVocab, getVocabDetails
+  deleteVocab, getVocab, getSingleVocab
 } from '../api/languageData';
 import addVocabForm from '../components/forms/addVocabForm';
 import viewVocab from '../pages/viewVocab';
@@ -57,6 +57,18 @@ const domEvents = (user) => {
       });
     }
 
+    if (e.target.id.includes('java-filter-btn')) {
+      getVocab(user.user_id).then((vocab) => {
+        const java = [];
+        vocab.forEach((word) => {
+          if (word.langTech === 'java') {
+            java.push(word);
+          }
+        });
+        showVocab(java);
+      });
+    }
+
     if (e.target.id.includes('edit-vocab-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
       getSingleVocab(firebaseKey).then((vocabObj) => addVocabForm(vocabObj));
@@ -64,7 +76,7 @@ const domEvents = (user) => {
 
     if (e.target.id.includes('view-vocab-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
-      getVocabDetails(firebaseKey).then(viewVocab);
+      getVocab(firebaseKey).then(viewVocab);
     }
   });
 };

@@ -78,10 +78,18 @@ const updateVocab = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const getVocabDetails = (firebaeKey) => new Promise((resolve, reject) => {
-  getSingleVocab(firebaeKey).then((vocabObj) => {
-    resolve({ ...vocabObj });
-  }).catch(reject);
+const filterVocab = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabulary.json?orderBy="uid"&equalTo"${uid}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  }).then((response) => response.json())
+    .then((data) => {
+      const filteredVocab = Object.values(data).filter((vocab) => vocab.langTech);
+      resolve(filteredVocab);
+    })
+    .catch(reject);
 });
 
 const searchVocab = (searchValue, uid) => new Promise((resolve, reject) => {
@@ -101,6 +109,6 @@ export {
   createVocab,
   updateVocab,
   searchVocab,
+  filterVocab,
   getLangTech,
-  getVocabDetails
 };

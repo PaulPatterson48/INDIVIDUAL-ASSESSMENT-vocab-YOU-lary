@@ -1,4 +1,4 @@
-import renderToDOM from '../../utils/renderToDom';
+import renderToDom from '../../utils/renderToDom';
 
 const navBar = () => {
   const domString = `
@@ -16,20 +16,11 @@ const navBar = () => {
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="select-vocab">Select Word</a>
-            </li>
+             
             <li class="nav-item">
               <a class="nav-link" href="#" id="show-vocab">Vocabulary</a>
             </li>
-            <li>
-            <input
-              class="form-control mr-sm-2"
-              id="search"
-              placeholder="Search Vocabulary Words"
-              aria-label="Search"
-            />
-            </li>
-          </ul>
+           
           <span class="navbar-text">
             <div id="cart-button"></div>
             <div id="logout-button"></div>
@@ -38,7 +29,7 @@ const navBar = () => {
         </div>
       </nav>`;
 
-  renderToDOM('#navigation', domString);
+  renderToDom('#navigation', domString);
 };
 
 export default navBar;

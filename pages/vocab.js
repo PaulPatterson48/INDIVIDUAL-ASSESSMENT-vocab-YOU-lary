@@ -16,13 +16,11 @@ const showVocab = (array) => {
   array.forEach((item) => {
     domString += `
       <div class="card">
-        <div class="card-body" style="height: 180px;">
+        <div class="card-body" style="height: 250px;">
           <h5 class="card-title">${item.title || ''}</h5>
             <p class="card-definition">${item.definition || ''}</p>
             <p class="card-time-submitted">${item.time_submitted || ''}</p>
-            <p class="card-langTech">${item.langTech || ''}</p>
-            <hr>
-            <i class="btn btn-success fas fa-eye" id="view-vocab-btn--${item.firebaseKey}"></i>
+            <p class="card-langTech">${item.langTech || ''}</p>     
             <i id="edit-vocab-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info">Edit</i>
             <i id="delete-vocab-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt">Delete</i>
         </div>

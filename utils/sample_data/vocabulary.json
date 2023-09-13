@@ -1,11 +1,11 @@
 {
   "-NdLxjA8Lk0UiFSofB-Y": {
     "firebaseKey": "-NdLxjA8Lk0UiFSofB-Y",
-    "title": "",
-    "definition": "",
+    "title": "JAVA",
+    "definition": "Java is a widely-used programming language for coding web applications. It has been a popular choice among developers for over two decades, with millions of Java applications in use today.",
     "time_submitted": "2023-01-12 02:20:37",
     "user_id": "JHzRGcJAesavdAJ90Jfs6RRHlzv1",
-    "langTech": ""
+    "langTech": "JAVA"
   },
   "-NdLxjA8Lk0UiFSofB-Z": {
     "firebaseKey": "-NdLxjA8Lk0UiFSofB-Z",
@@ -30,13 +30,5 @@
     "time_submitted": "2022-12-22 22:40:59",
     "user_id": "JHzRGcJAesavdAJ90Jfs6RRHlzv1",
     "langTech": "Python"
-  },
-  "-NdLxjABrwRN4ixLFWuW": {
-    "firebaseKey": "-NdLxjABrwRN4ixLFWuW",
-    "title": "",
-    "definition": "",
-    "time_submitted": "2023-05-20 15:27:42",
-    "user_id": "JHzRGcJAesavdAJ90Jfs6RRHlzv1",
-    "langTech": ""
   }
 }

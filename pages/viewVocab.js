@@ -1,5 +1,5 @@
 import clearDom from '../utils/clearDom';
-import renderToDOM from '../utils/renderToDom';
+import renderToDom from '../utils/renderToDom';
 
 const viewVocab = (obj) => {
   clearDom();
@@ -12,15 +12,16 @@ const viewVocab = (obj) => {
         <i id="edit-vocab-btn--${obj.firebaseKey}" class="fas fa-edit btn-info"></i>
         <i id="delete-vocab-btn--${obj.firebaseKey}" class="btn btn-danger fas fa-trach-alt"></i>
       </div>
-    </img>
-  </div>
+     </div>
   <div class="text-white ms-5 details">
-  <h5>${obj.title} by ${obj.vocabObj}</h5>
-  <p>${obj.description || ''}</p>
+  <h5>${obj.title} by ${obj.vocabObj} </h5>
+  <p>${obj.definition || ''}</p>
+  <p>${obj.time_submitted || ''}</p>
+  <p>${obj.langTech || ''}</p>
   </div>
 </div>`;
 
-  renderToDOM('#view', domString);
+  renderToDom('#view', domString);
 };
 
 export default viewVocab;

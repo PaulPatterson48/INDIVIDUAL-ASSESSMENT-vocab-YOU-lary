@@ -7,11 +7,11 @@ const formEvents = (user) => {
     if (e.target.id.includes('submit-vocab')) {
       const currentTime = new Date().toLocaleDateString();
       const payload = {
+        title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
         langTech: document.querySelector('#langTech').value,
         time_submitted: currentTime,
-        title: document.querySelector('#title').value,
-        user_id: `${user.user_id}`
+        user_id: user.user_id
       };
 
       createVocab(payload).then(({ name }) => {
@@ -27,10 +27,10 @@ const formEvents = (user) => {
       const [, firebaseKey] = e.target.id.split('--');
       const newTime = new Date().toLocaleTimeString();
       const payload = {
+        title: document.querySelectior('#title').value,
         definition: document.querySelector('#definition').value,
         langTech: document.querySelector('#langTech').value,
         time_submitted: newTime,
-        title: document.querySelectior('#title').value,
         user_id: user.user_id,
         firebaseKey,
       };

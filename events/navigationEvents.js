@@ -1,5 +1,5 @@
 import { signOut } from '../utils/auth';
-import { getVocab, searchVocab } from '../api/languageData';
+import { getVocab } from '../api/languageData';
 import { emptyVocab, showVocab } from '../pages/vocab';
 
 const navigationEvents = (user) => {
@@ -19,21 +19,22 @@ const navigationEvents = (user) => {
     });
   });
 
-  document.querySelector('#search').addEventListener('keyup', (e) => {
-    const searchValue = document.querySelector('#search').ariaValueMax.toLowerCase();
-
-    if (e.keyCode === 13) {
-      searchVocab(searchValue, user.uid)
-        .then((search) => {
-          if (search.length) {
-            showVocab(search);
-          } else {
-            emptyVocab();
-          }
-        });
-      document.querySelector('#search').value = '';
-    }
-  });
+  // document.querySelector('#search').addEventListener('keyup', (e) => {
+  // const searchValue = document.querySelector('#search').ariaValueMax.toLowerCase();
+//
+  // if (e.keyCode === 13) {
+  // searchVocab(searchValue, user.uid)
+  // .then((search) => {
+  // if (search.length) {
+  // console.warn(search);
+  // showVocab(search);
+  // } else {
+  // emptyVocab();
+  // }
+  // });
+  // document.querySelector('#search').value = '';
+  // }
+  // });
 };
-
+//
 export default navigationEvents;

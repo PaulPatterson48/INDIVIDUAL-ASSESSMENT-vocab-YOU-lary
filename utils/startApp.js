@@ -14,8 +14,8 @@ const startApp = (user) => {
   formEvents(user);
   navBar();
   filterButtons();
-  logoutButton();
   navigationEvents(user);
+  logoutButton();
 
   getVocab(user.uid).then((array) => showVocab(array));
 };
