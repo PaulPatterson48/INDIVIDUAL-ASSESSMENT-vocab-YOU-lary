@@ -1,6 +1,6 @@
-const renderToDOM = (divId, content) => {
+const renderToDom = (divId, content) => {
   const selectedDiv = document.querySelector(divId);
   selectedDiv.innerHTML = content;
 };
 
-export default renderToDOM;
+export default renderToDom;

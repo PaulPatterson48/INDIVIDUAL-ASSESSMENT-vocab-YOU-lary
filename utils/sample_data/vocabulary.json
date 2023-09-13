@@ -4,119 +4,39 @@
     "title": "",
     "definition": "",
     "time_submitted": "2023-01-12 02:20:37",
-    "user_id": "",
+    "user_id": "JHzRGcJAesavdAJ90Jfs6RRHlzv1",
     "langTech": ""
   },
   "-NdLxjA8Lk0UiFSofB-Z": {
     "firebaseKey": "-NdLxjA8Lk0UiFSofB-Z",
-    "title": "",
-    "definition": "",
+    "title": "JSON",
+    "definition": "JSON stands for JavaScript Object Notation. It is a lightweight format for storing and transporting data",
     "time_submitted": "2023-02-10 21:35:49",
-    "user_id": "",
-    "langTech": ""
+    "user_id": "JHzRGcJAesavdAJ90Jfs6RRHlzv1",
+    "langTech": "JSON"
   },
   "-NdLxjA9lalv7nqUekGW": {
     "firebaseKey": "-NdLxjA9lalv7nqUekGW",
-    "title": "",
-    "definition": "",
+    "title": "C#",
+    "definition": "C# is a general-purpose, object-oriented programming language with applications across many areas in software development",
     "time_submitted": "2023-01-21 06:04:35",
-    "user_id": "",
-    "langTech": ""
+    "user_id": "JHzRGcJAesavdAJ90Jfs6RRHlzv1",
+    "langTech": "C#"
   },
   "-NdLxjAA2TVbSzK5nw_d": {
     "firebaseKey":  "-NdLxjAA2TVbSzK5nw_d",
-    "title": "",
-    "definition": "",
+    "title": "Python",
+    "definition": "Python is a computer programming language often used to build websites and sofware, automate tasks, and conduct data analysis",
     "time_submitted": "2022-12-22 22:40:59",
-    "user_id": "",
-    "langTech": ""
+    "user_id": "JHzRGcJAesavdAJ90Jfs6RRHlzv1",
+    "langTech": "Python"
   },
   "-NdLxjABrwRN4ixLFWuW": {
     "firebaseKey": "-NdLxjABrwRN4ixLFWuW",
     "title": "",
     "definition": "",
     "time_submitted": "2023-05-20 15:27:42",
-    "user_id": "",
+    "user_id": "JHzRGcJAesavdAJ90Jfs6RRHlzv1",
     "langTech": ""
-  },
-  "-NdLxjABrwRN4ixLFWuX": {
-    "firebaseKey": "-NdLxjABrwRN4ixLFWuX",
-    "title": "",
-    "definition": "",
-    "time_submitted": "2022-10-09 18:53:34",
-    "user_id": "",
-    "langTech": ""
-  },
-  "-NdLxjAC3S5RZJpb7iSR": {
-    "firebaseKey": "-NdLxjAC3S5RZJpb7iSR",
-    "title": "null",
-    "definition": "null",
-    "time_submitted": "2023-08-27 23:18:07",
-    "user_id": "null",
-    "langTech": "null"
-  },
-  "-NdLxjAC3S5RZJpb7iSS": {
-    "firebaseKey": "-NdLxjAC3S5RZJpb7iSS",
-    "title": "null",
-    "definition": "null",
-    "time_submitted": "2022-11-17 13:39:27",
-    "user_id": "null",
-    "langTech": "null"
-  },
-  "-NdLxjAC3S5RZJpb7iST": {
-    "firebaseKey": "-NdLxjAC3S5RZJpb7iST",
-    "title": "null",
-    "definition": "null",
-    "time_submitted": "2023-02-16 07:07:18",
-    "user_id": "null",
-    "langTech": "null"
-  },
-  "-NdLxjADTQXCtVMm7kbx": {
-    "firebaseKey": "-NdLxjADTQXCtVMm7kbx",
-    "title": "null",
-    "definition": "null",
-    "time_submitted": "2023-08-28 12:21:55",
-    "user_id": "null",
-    "langTech": "null"
-  },
-  "-NdLxjAEdsV2_to8IMpk": {
-    "firebaseKey": "-NdLxjAEdsV2_to8IMpk",
-    "title": "null",
-    "definition": "null",
-    "time_submitted": "2023-03-08 10:28:54",
-    "user_id": "null",
-    "langTech": "null"
-  },
-  "-NdLxjAEdsV2_to8IMpl": {
-    "firebaseKey": "-NdLxjAEdsV2_to8IMpl",
-    "title": "null",
-    "definition": "null",
-    "time_submitted": "2022-11-08 04:28:16",
-    "user_id": "null",
-    "langTech": "null"
-  },
-  "-NdLxjAFF6TfEA7li7Ko": {
-    "firebaseKey": "-NdLxjAFF6TfEA7li7Ko",
-    "title": "null",
-    "definition": "null",
-    "time_submitted": "2023-05-14 01:37:36",
-    "user_id": "null",
-    "langTech": "null"
-  },
-  "-NdLxjAFF6TfEA7li7Kp": {
-    "firebaseKey": "-NdLxjAFF6TfEA7li7Kp",
-    "title": "null",
-    "definition": "null",
-    "time_submitted": "2023-08-07 07:34:51",
-    "user_id": "null",
-    "langTech": "null"
-  },
-  "-NdLxjAG8FTPYDrtE4tN": {
-    "firebaseKey": "-NdLxjAG8FTPYDrtE4tN",
-    "title": "null",
-    "definition": "null",
-    "time_submitted": "2023-06-28 04:09:53",
-    "user_id": "null",
-    "langTech": "null"
   }
 }

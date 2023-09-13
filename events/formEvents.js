@@ -2,15 +2,16 @@ import { getVocab, createVocab, updateVocab } from '../api/languageData';
 import { showVocab } from '../pages/vocab';
 
 const formEvents = (user) => {
-  document.querySelector('#main-container').addEventListener('submit', (e) => {
+  document.querySelector('#form-container').addEventListener('submit', (e) => {
     e.preventDefault();
-    if (e.target.dispatchEvent.includes('submit-vocab')) {
+    if (e.target.id.includes('submit-vocab')) {
+      const currentTime = new Date().toLocaleDateString();
       const payload = {
         definition: document.querySelector('#definition').value,
         langTech: document.querySelector('#langTech').value,
-        time_submitted: document.querySelector('#dateTime').value,
+        time_submitted: currentTime,
         title: document.querySelector('#title').value,
-        user_id: user.user_id
+        user_id: `${user.user_id}`
       };
 
       createVocab(payload).then(({ name }) => {
@@ -22,14 +23,16 @@ const formEvents = (user) => {
       });
     }
 
-    if (e.target.dispatchEvent.includes('update-Vocab')) {
+    if (e.target.id.includes('update-Vocab')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      const newTime = new Date().toLocaleTimeString();
       const payload = {
         definition: document.querySelector('#definition').value,
         langTech: document.querySelector('#langTech').value,
-        time_submitted: document.querySelector('#dateTime').value,
+        time_submitted: newTime,
         title: document.querySelectior('#title').value,
-        user_id: user.user_id
-        // firebasekey,
+        user_id: user.user_id,
+        firebaseKey,
       };
 
       updateVocab(payload).then(() => {

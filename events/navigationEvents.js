@@ -5,7 +5,7 @@ import { emptyVocab, showVocab } from '../pages/vocab';
 const navigationEvents = (user) => {
   document.querySelector('#logout-button')
     .addEventListener('click', signOut);
-  document.querySelector('show-vocab').addEventListener('click', () => {
+  document.querySelector('#show-vocab').addEventListener('click', () => {
     getVocab(user.uid).then(getVocab);
   });
 
