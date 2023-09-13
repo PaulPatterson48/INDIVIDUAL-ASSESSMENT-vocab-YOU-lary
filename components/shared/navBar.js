@@ -19,7 +19,7 @@ const navBar = () => {
               <a class="nav-link" href="#" id="select-vocab">Select Word</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="vocab">Vocabulary</a>
+              <a class="nav-link" href="#" id="show-vocab">Vocabulary</a>
             </li>
             <li>
             <input

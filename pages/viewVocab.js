@@ -10,7 +10,7 @@ const viewVocab = (obj) => {
     <img src=${obj.image} alt=${obj.title} style="width: 300px;">
       <div class="mt-5">
         <i id="edit-vocab-btn--${obj.firebaseKey}" class="fas fa-edit btn-info"></i>
-        <i id="delete-vocab--${obj.firebaseKey}" class="btn btn-danger fas fa-trach-alt"></i>
+        <i id="delete-vocab-btn--${obj.firebaseKey}" class="btn btn-danger fas fa-trach-alt"></i>
       </div>
     </img>
   </div>
@@ -20,7 +20,7 @@ const viewVocab = (obj) => {
   </div>
 </div>`;
 
-  renderToDOM('view', domString);
+  renderToDOM('#view', domString);
 };
 
 export default viewVocab;

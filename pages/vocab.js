@@ -9,20 +9,22 @@ const emptyVocab = () => {
 const showVocab = (array) => {
   clearDom();
 
-  const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-vocab-btn">Add A Book</button>';
+  const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-vocab-btn">Add A Vocab</button>';
   renderToDom('#add-button', btnString);
 
-  let domString = '';
+  let domString = ' ';
   array.forEach((item) => {
     domString += `
       <div class="card">
-        <img class="card-img-top" src=${item.image} alt=${item.title} style="height: 400px;">
         <div class="card-body" style="height: 180px;">
-          <h5 class="card-title">${item.title}</h5>
+          <h5 class="card-title">${item.title || ''}</h5>
+            <p class="card-definition">${item.definition || ''}</p>
+            <p class="card-time-submitted">${item.time_submitted || ''}</p>
+            <p class="card-langTech">${item.langTech || ''}</p>
             <hr>
             <i class="btn btn-success fas fa-eye" id="view-vocab-btn--${item.firebaseKey}"></i>
-            <i id="edit-vocab-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info"></i>
-            <i id="delete-vocab-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt"></i>
+            <i id="edit-vocab-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info">Edit</i>
+            <i id="delete-vocab-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt">Delete</i>
         </div>
       </div>`;
   });

@@ -4,7 +4,7 @@ import client from '../utils/client';
 const endpoint = client.databaseURL;
 
 const getVocab = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/vocabulary.json?orderBy="uid"&equalTo=${uid}"`, {
+  fetch(`${endpoint}/vocabulary.json?orderBy="user_id"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
@@ -54,6 +54,18 @@ const createVocab = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getLangTech = () => Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabulary.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+      .then((response) => response.json())
+      .then((data) => resolve(data))
+      .catch(reject)
+  });
+});
+
 const updateVocab = (payload) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/vocabulary/${payload.firebaeKey}.json`, {
     method: 'PATCH',
@@ -89,5 +101,6 @@ export {
   createVocab,
   updateVocab,
   searchVocab,
+  getLangTech,
   getVocabDetails
 };
