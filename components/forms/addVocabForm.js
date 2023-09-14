@@ -1,10 +1,10 @@
 import clearDom from '../../utils/clearDom';
 import renderToDOM from '../../utils/renderToDom';
 
-const addVocabForm = (obj = {}) => {
+const addVocabForm = (uid, obj = {}) => {
   clearDom();
   const domString = `
-  <form id="${obj.firebaeKey ? `update-Vocab--${obj.firebaseKey}` : 'submit-vocab'}" class="mb-4">
+  <form id="${obj.firebaseKey ? `update-Vocab--${obj.firebaseKey}` : 'submit-vocab'}" class="mb-4">
     <div class="form-group">
       <label for="title">Vocabulary</label>
       <input type="text" class="form-control" placeholder="Enter Vocabulary Title" id="title" aria-describedby="vocabTitle"  value="${obj.title || ''}" required>
