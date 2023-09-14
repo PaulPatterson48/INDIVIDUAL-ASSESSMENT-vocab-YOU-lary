@@ -67,7 +67,7 @@ const getLangTech = () => Promise((resolve, reject) => {
 });
 
 const updateVocab = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/vocabulary/${payload.firebaeKey}.json`, {
+  fetch(`${endpoint}/vocabulary/${payload.firebaseKey}.json`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'applicaton/json'
@@ -79,14 +79,14 @@ const updateVocab = (payload) => new Promise((resolve, reject) => {
 });
 
 const filterVocab = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/vocabulary.json?orderBy="uid"&equalTo"${uid}`, {
+  fetch(`${endpoint}/vocabulary.json?orderBy="user_id"&equalTo"${uid}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
     },
   }).then((response) => response.json())
     .then((data) => {
-      const filteredVocab = Object.values(data).filter((vocab) => vocab.langTech);
+      const filteredVocab = Object.values(data).filter((vocab) => vocab.langTech.toLowerCase());
       resolve(filteredVocab);
     })
     .catch(reject);

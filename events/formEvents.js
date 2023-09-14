@@ -11,14 +11,15 @@ const formEvents = (user) => {
         definition: document.querySelector('#definition').value,
         langTech: document.querySelector('#langTech').value,
         time_submitted: currentTime,
-        user_id: user.user_id
+        user_id: user.uid
       };
 
       createVocab(payload).then(({ name }) => {
+        console.warn(name);
         const patchPayload = { firebaseKey: name };
 
         updateVocab(patchPayload).then(() => {
-          getVocab(user.user_id).then(showVocab);
+          getVocab(user.uid).then(showVocab);
         });
       });
     }
@@ -31,12 +32,12 @@ const formEvents = (user) => {
         definition: document.querySelector('#definition').value,
         langTech: document.querySelector('#langTech').value,
         time_submitted: newTime,
-        user_id: user.user_id,
+        user_id: user.uid,
         firebaseKey,
       };
 
       updateVocab(payload).then(() => {
-        getVocab(user.user_id).then(showVocab);
+        getVocab(user.uid).then(showVocab);
       });
     }
   });

@@ -15,15 +15,16 @@ const addVocabForm = (obj = {}) => {
     </div>
     <div class="form-group">
     <label for="time_submitted">DateTime</label>
-    <option class="color" id="black" value="">${obj.time_submitted || ''}"</option>
+    <option class="color"  value="">${obj.time_submitted || ''}"</option>
     </div>
    <div class="form-group">
     <select class="form-control" id="langTech" required>
     <option value="">Select a Language</option>${obj.langTech || ''}" required>
     <option value="python">Python</option>
-    <option value="C#">C#</option>
+    <option value="c#">C#</option>
     <option value="javascript">Javascript</option>
     <option value="java">Java</option>
+    <option value="json">JSON</option>
     </select>
     </div>
     <div class="form-group" id="dateTime"></div>

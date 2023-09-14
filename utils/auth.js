@@ -8,6 +8,7 @@ const signIn = () => {
 
 const signOut = () => {
   firebase.auth().signOut();
+  document.querySelector('#login-form-container').innerHTML = '';
 };
 
 export { signIn, signOut };

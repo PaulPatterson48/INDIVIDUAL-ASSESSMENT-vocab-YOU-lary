@@ -22,7 +22,7 @@ const domEvents = (user) => {
     }
 
     if (e.target.id.includes('javascript-filter-btn')) {
-      getVocab(user.user_id).then((vocab) => {
+      getVocab(user.uid).then((vocab) => {
         const javascript = [];
         vocab.forEach((word) => {
           if (word.langTech === 'javascript') {
@@ -34,7 +34,7 @@ const domEvents = (user) => {
     }
 
     if (e.target.id.includes('cSharp-filter-btn')) {
-      getVocab(user.user_id).then((vocab) => {
+      getVocab(user.uid).then((vocab) => {
         const cSharp = [];
         vocab.forEach((word) => {
           if (word.langTech === 'C#') {
@@ -45,8 +45,20 @@ const domEvents = (user) => {
       });
     }
 
+    if (e.target.id.includes('json-filter-btn')) {
+      getVocab(user.uid).then((vocab) => {
+        const json = [];
+        vocab.forEach((word) => {
+          if (word.langTech === 'json') {
+            json.push(word);
+          }
+        });
+        showVocab(json);
+      });
+    }
+
     if (e.target.id.includes('python-filter-btn')) {
-      getVocab(user.user_id).then((vocab) => {
+      getVocab(user.uid).then((vocab) => {
         const python = [];
         vocab.forEach((word) => {
           if (word.langTech === 'python') {
@@ -58,7 +70,7 @@ const domEvents = (user) => {
     }
 
     if (e.target.id.includes('java-filter-btn')) {
-      getVocab(user.user_id).then((vocab) => {
+      getVocab(user.uid).then((vocab) => {
         const java = [];
         vocab.forEach((word) => {
           if (word.langTech === 'java') {
