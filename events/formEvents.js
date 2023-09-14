@@ -28,10 +28,10 @@ const formEvents = (user) => {
       const newTime = new Date().toLocaleTimeString();
       const [, firebaseKey] = e.target.id.split('--');
       const payload = {
+        title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
         langTech: document.querySelector('#langTech').value,
         time_submitted: newTime,
-        title: document.querySelectior('#title').value,
         user_id: user.uid,
         firebaseKey,
       };
