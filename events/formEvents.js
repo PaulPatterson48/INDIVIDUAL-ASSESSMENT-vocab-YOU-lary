@@ -25,13 +25,13 @@ const formEvents = (user) => {
     }
 
     if (e.target.id.includes('update-Vocab')) {
-      const [, firebaseKey] = e.target.id.split('--');
       const newTime = new Date().toLocaleTimeString();
+      const [, firebaseKey] = e.target.id.split('--');
       const payload = {
-        title: document.querySelectior('#title').value,
         definition: document.querySelector('#definition').value,
         langTech: document.querySelector('#langTech').value,
         time_submitted: newTime,
+        title: document.querySelectior('#title').value,
         user_id: user.uid,
         firebaseKey,
       };
